@@ -2,12 +2,16 @@ import NavList from './NavList';
 import Logo from './Logo';
 import SocialItem from './SocialItem';
 import '@/styles/footer.scss';
+import facebook from '../../public/svg/facebook.svg';
+import instagram from '../../public/svg/instagram.svg';
+import linkedin from '../../public/svg/linkedin.svg';
+import youtube from '../../public/svg/youtube.svg';
 
 const socialItems = [
-  { name: 'facebook', image: '/svg/facebook.svg', link: '#' },
-  { name: 'instagram', image: '/svg/instagram.svg', link: '#' },
-  { name: 'linkedin', image: '/svg/linkedin.svg', link: '#' },
-  { name: 'youtube', image: '/svg/youtube.svg', link: '#' },
+  { name: 'facebook', image: facebook, link: '#' },
+  { name: 'instagram', image: instagram, link: '#' },
+  { name: 'linkedin', image: linkedin, link: '#' },
+  { name: 'youtube', image: youtube, link: '#' },
 ];
 
 export default function Footer() {

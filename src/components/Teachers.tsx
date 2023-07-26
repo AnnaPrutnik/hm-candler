@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from 'next/image';
-import Decor from './Decor';
 import { teachers } from '@/db/teachers';
 import '@/styles/teachers.scss';
 

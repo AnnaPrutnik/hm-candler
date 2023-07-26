@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface SocialItemProp {
   name: string;
-  image: string;
+  image: StaticImageData;
   link: string;
 }
 
