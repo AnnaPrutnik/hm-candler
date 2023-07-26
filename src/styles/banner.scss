@@ -1,0 +1,59 @@
+.banner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../public/banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .banner {
+    &__btn {
+      position: static;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    &__inner {
+      height: 150px;
+    }
+
+    &__title {
+      max-width: 60%;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .banner {
+    &__inner {
+      height: 332px;
+    }
+
+    &__btn {
+      position: static;
+    }
+  }
+}

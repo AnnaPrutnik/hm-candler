@@ -1,0 +1,131 @@
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 15px;
+  overflow-x: hidden;
+
+  &__list {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__item {
+    padding-right: 10px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    &.hidden {
+      position: absolute;
+      pointer-events: none;
+      transform: translateX(110%);
+      animation: hiddenCard;
+      animation-duration: 1s;
+      transition: opacity 2000ms ease;
+    }
+
+    &.shown {
+      pointer-events: all;
+      transform: translateX(0%);
+      animation: shownCard;
+      animation-duration: 1s;
+    }
+  }
+
+  &__card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+  }
+
+  &__content {
+    text-align: center;
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    overflow: hidden;
+
+    & .btn {
+      margin: 0 auto;
+    }
+  }
+
+  &__media {
+    width: 15px;
+    height: 15px;
+    background-image: url('../../public/svg/youtube.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+
+    &.instagram {
+      background-image: url('../../public/svg/instagram.svg');
+    }
+
+    &.facebook {
+      background-image: url('../../public/svg/facebook.svg');
+    }
+  }
+
+  &__message {
+    height: 105px;
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 480px) {
+  .reviews {
+    &__card {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
+
+    &__content {
+      text-align: start;
+
+      & .btn {
+        margin: 0;
+        margin-left: auto;
+      }
+    }
+
+    &__image {
+      width: 200px;
+      height: 200px;
+    }
+
+    &__media {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    padding-top: 150px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .reviews {
+    &__message {
+      height: 240px;
+      overflow-y: hidden;
+    }
+
+    &__image {
+      width: 380px;
+      height: 370px;
+    }
+  }
+}

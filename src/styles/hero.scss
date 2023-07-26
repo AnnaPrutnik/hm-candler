@@ -1,0 +1,137 @@
+.hero {
+  padding-bottom: 50px;
+  padding-top: 62px;
+
+  &__title {
+    font-family: var(--font-yeseva);
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 203px auto;
+  }
+
+  &__background {
+    position: relative;
+    top: -35px;
+    left: 10px;
+    width: 137px;
+    aspect-ratio: 76/100;
+    transform: scale(1.2);
+    background-image: url('../../public/hero-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 480px) {
+  .hero {
+    padding-top: 110px;
+    overflow-x: hidden;
+
+    &__inner {
+      grid-template-columns: 180px auto;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__text {
+      font-size: 9px;
+    }
+
+    &__btn {
+      margin-bottom: 80px;
+    }
+
+    &__background {
+      width: 310px;
+      aspect-ratio: 1/1;
+      top: -80px;
+      left: -15px;
+      transform: scale(1);
+      background-image: url('../../public/hero-tablet.png');
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 40px;
+
+    &__inner {
+      grid-template-columns: 230px auto;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 10px;
+      margin-bottom: 20px;
+    }
+
+    &__background {
+      width: 665px;
+      aspect-ratio: 16/10;
+      top: -110px;
+      left: -75px;
+      background-image: url('../../public/hero-desktop.png');
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    &__inner {
+      grid-template-columns: 333px auto;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    &__background {
+      left: -55px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    &__inner {
+      grid-template-columns: 392px auto;
+    }
+
+    &__text {
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__background {
+      width: 1067px;
+      height: 670px;
+      left: -170px;
+    }
+  }
+}
